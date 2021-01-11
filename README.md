@@ -18,4 +18,5 @@ recommended to build with `-static-libgcc -static-libstdc++`.
  - gcc 9.3.0
  - ninja 1.10.0
  - python 2.7.18
+ - python 3.9.0
  - clang 10.0.0
