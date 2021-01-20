@@ -47,7 +47,7 @@ RUN wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/l
     tar xf llvm-project-10.0.0.tar.xz && rm llvm-project-10.0.0.tar.xz && \
     cd llvm-project-10.0.0 && mkdir build && cd build && \
     cmake ../llvm -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release \
-                  -DLLVM_ENABLE_PROJECTS=clang -GNinja && \
+                  -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt" -GNinja && \
     cmake --build . -j80 && cmake --install . && \
     cd ../.. && rm -rf llvm-project-10.0.0
 
@@ -56,7 +56,7 @@ RUN wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/l
     cd llvm-project-10.0.0 && mkdir build && cd build && \
     cmake ../llvm -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ \
-                  -DLLVM_ENABLE_PROJECTS=clang -GNinja && \
+                  -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt" -GNinja && \
     cmake --build . -j80 && cmake --install . && \
     cd ../.. && rm -rf llvm-project-10.0.0
 
