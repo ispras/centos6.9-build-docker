@@ -13,11 +13,17 @@ recommended to build with `-static-libgcc -static-libstdc++`.
 ## What this Docker contains
 
  - make
- - cmake 3.17.3
+ - cmake 3.21.3
  - binutils 2.34
  - gcc 9.3.0
- - ninja 1.10.0
+ - ninja 1.10.2
  - python 2.7.18
  - python 3.9.0
  - clang 10.0.0
- - openssl 1.1.1
+ - openssl 1.1.1i
+ - Rust
+
+## Note
+
+`wget` doesn't work inside docker due to CA certificates issue. Use `curl`
+instead.
