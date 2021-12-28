@@ -10,7 +10,7 @@ RUN yum -y update && yum -y install epel-release && yum -y update && \
     yum -y install gcc gcc-c++ glibc-devel.i686 glibc-devel \
                    libstdc++-devel.i686 libstdc++-devel make zlib-devel \
                    python-devel git wget unzip xz bzip2 lzop re2c \
-                   texi2html texinfo libffi-devel
+                   texi2html texinfo libffi-devel m4 glibc-static
 
 RUN curl -O https://www.openssl.org/source/openssl-1.1.1i.tar.gz && \
     tar xf openssl-1.1.1i.tar.gz && rm openssl-1.1.1i.tar.gz && \
